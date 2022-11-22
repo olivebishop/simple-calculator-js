@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple calculator</title>
+    <style>
+        #container{
+            background-color: black;
+            width: 20%;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <Label for="textno1">Number 1:</Label><br>
+        <input type="text" id="textno1" value="0"><br>
+
+        <label for="textno2">Number 2</label><br>
+        <input type="text" id="textno2" value="0"><br>
+
+        <label for="textresults">Results</label><br>
+        <input type="text" id="textresults" value="0" disabled> <br>
+
+        <input type="button" value="+" onclick="add()">
+        <input type="button" value="-" onclick="subtract()">
+        <input type="button" value="*" onclick="()">
+        <input type="button" value="/" onclick="/()">
+        <input type="button" value="Reset" onclick="reset()">
+    </div> 
+    <script>
+        function reset(){
+        document.getElementById("textno1") .value = "0";
+        document.getElementById("textno2") .value = "0";
+        document.getElementById("textresults") .value = "0";
+        
+            }
+            function add(){
+            var no1 = Number( document.getElementById("textno1") .value);
+            var no2 = Number( document.getElementById("textno2") .value);
+            var results = no1 + no2;
+            document.getElementById("textresults") .value = String(results);
+            }
+            function subtract(){
+            var no1 = Number( document.getElementById("textno1") .value);
+            var no2 = Number( document.getElementById("textno2") .value);
+            var results = no1 - no2;
+            document.getElementById("textresults") .value = String(results);
+        }
+            function multiply(){
+            var no1 = Number( document.getElementById("textno1") .value);
+            var no2 = Number( document.getElementById("textno2") .value);
+            var results = no1 * no2;
+            document.getElementById("textresults") .value = String(results);
+        }
+            function divide(){
+            var no1 = Number( document.getElementById("textno1") .value);
+            var no2 = Number( document.getElementById("textno2") .value);
+            var results = no1 / no2;
+            document.getElementById("textresults") .value = String(results);
+            
+        }
+    </script>
+</body>
+</html>
